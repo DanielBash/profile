@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if user %}
+<p>Or hey, you are registered. There are some useful links: <a href="{{url_for('users.user', username=user.username)}}">Your profile</a>,<br/>
+<a href="{{url_for('posts.posts', username=user.username)}}">Make a post</a>,<br/>
+<a href="{{url_for('messages.filter')}}">View your inbox</a><br/>
+</p>
+{% endif %}
+
+{% endblock %}

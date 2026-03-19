@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if form %}
+  {% for fieldname, errors in form.errors.items() %}
+    {% for error in errors %}
+<aside>
+<div class="card warn">
+ <p>{{ form[fieldname].label.text or fieldname }}</p>
+ <p>{{ error }}</p>
+</div>
+</aside>
+    {% endfor %}
+  {% endfor %}
+{% endif %}
+
+<h1>Posts</h1>
+
+<p>Theese are posts made by {{ target_user.username }}!</p>
+
+{% if form %}
+<form method="POST">
+      {{ form.hidden_tag() }}
+      <fieldset>
+          <legend>Create Post</legend>
+            <p>{{ form.subject.label }}
+            {{ form.subject(size=32) }}</p>
+            <p>{{ form.content.label }}
+            {{ form.content(size=32) }}</p>
+      </fieldset>
+
+      <fieldset id="forms__action">
+        <legend>Submit</legend>
+          {{ form.submit() }}
+      </fieldset>
+</form>
+{% endif %}
+
+{% if posts.__len__() > 0 %}
+<figure>
+<table>
+ <thead>
+  <tr>
+   <th>Subject</th>
+   <th>When</th>
+  </tr>
+ </thead>
+ <tbody>
+        {% for post in posts %}
+        <tr>
+        <td><a href="{{ url_for('posts.post', id=post.id) }}">{{ post.subject}}</a></td>
+        <td>{{ post.published_at}}</td>
+        </tr>
+        {% endfor %}
+ </tbody>
+ <caption>  {% if pagination.has_prev %}
+    <a href="{{ url_for('mail.received', page=pagination.prev_num) }}">Previous</a>
+  {% endif %}
+
+  Page {{ pagination.page }} of {{ pagination.pages }}
+
+  {% if pagination.has_next %}
+    <a href="{{ url_for('mail.received', page=pagination.next_num) }}">Next</a>
+  {% endif %} </caption>
+</table>
+</figure>
+{% else %}
+<p>This user hasnt got any posts yet.</p>
+{% endif %}
+
+
+{% endblock %}
