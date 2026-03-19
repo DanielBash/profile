@@ -1,4 +1,4 @@
-name: update docker image
+name: update-docker-image
 
 on:
   push:

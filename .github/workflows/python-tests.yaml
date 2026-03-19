@@ -1,4 +1,4 @@
-name: flask tests
+name: app-tests
 
 on: [push, pull_request]
 
@@ -17,3 +17,7 @@ jobs:
           pip install pytest
       - name: Run tests
         run: pytest --tb=short
+  ,,,
+<(^.^)>
+  -|-
+  /\
