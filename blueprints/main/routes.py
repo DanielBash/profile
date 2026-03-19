@@ -12,4 +12,4 @@ bp = Blueprint('main', __name__)
 
 @bp.route('/', methods=['GET'])
 def index():
-    return render_template('index.html', title='Flag Sweeper')
+    return render_template('index.html', title='I am Daniel!')

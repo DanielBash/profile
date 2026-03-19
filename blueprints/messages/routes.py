@@ -59,7 +59,7 @@ def filter():
         "messages.html",
         messages=messages,
         pagination=pagination,
-        title='FS: Messages',
+        title='Messages',
         form=form
     )
 
@@ -73,7 +73,7 @@ def message(id):
         return render_template(
         "message.html",
         message=message,
-        title='FS: Message',
+        title='Message',
     )
     
     return redirect(url_for('main.index'))

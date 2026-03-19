@@ -58,7 +58,7 @@ def posts(username):
             "posts.html",
             posts=posts,
             pagination=pagination,
-            title='FS: Posts',
+            title='Posts',
             form=form,
             target_user=target_user
         )
@@ -67,7 +67,7 @@ def posts(username):
             "posts.html",
             posts=posts,
             pagination=pagination,
-            title='FS: Posts',
+            title='Posts',
             form=False,
             target_user=target_user
         )
@@ -82,5 +82,5 @@ def post(id):
         "post.html",
         post=post,
         target_user=target_user,
-        title='FS: Post',
+        title='Post',
     )

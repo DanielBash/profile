@@ -23,12 +23,12 @@ def register():
                              email=form.data['email'])
         if user is None:
             flash('This username already exists, sorry.', 'Warning')
-            return render_template('register.html', form=form, title='FS: Registration')
+            return render_template('register.html', form=form, title='Registration')
         else:
             session['user_id'] = user.id
             flash('Registration successful!', 'Success')
         return redirect(url_for('main.index'))
-    return render_template('register.html', form=form, title='FS: Registration')
+    return render_template('register.html', form=form, title='Registration')
 
 
 @bp.route('/login', methods=['GET', 'POST'])
@@ -42,7 +42,7 @@ def login():
         else:
             flash('Incorrect credentials!', 'Warning')
             return redirect(url_for('auth.login'))
-    return render_template('login.html', form=form, title='FS: Login')
+    return render_template('login.html', form=form, title='Login')
 
 
 @bp.route('/logout', methods=['GET', 'POST'])
@@ -60,4 +60,4 @@ def edit():
         db.session.commit()
         flash('Info successfully updated', 'Success')
         return redirect(url_for('users.user', username=g.user.username))
-    return render_template('edit.html', form=form, title='FS: Edit profile')
+    return render_template('edit.html', form=form, title='Edit profile')
