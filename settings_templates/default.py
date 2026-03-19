@@ -35,7 +35,7 @@ PERMISSION_GROUPS = {
 
 # -- admin credentials
 ADMIN_PASSWORD = 'password'
-ADMIN_USERNAME = 'admin'
+ADMIN_USERNAME = 'daniel'
 ADMIN_PERMISSION_GROUP = 'admin'
 ADMIN_EMAIL = 'hidden@example.com'
 ADMIN_BIO = 'I am the admin and the creator of this website.'

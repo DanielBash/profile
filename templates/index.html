@@ -1,9 +1,50 @@
 {% extends "base.html" %}
 
 {% block content %}
+<h1>Hell-0, I am Daniel!</h1>
+<p>I am Russian developer, math enjoyer, table tennis player. Feel free to contact me.</p>
 
-Hello, I am Daniel. I am the creator of this and many more websites.
+ <figure>
+      <table>
+ <thead>
+  <tr>
+   <th>Type</th>
+   <th>Address</th>
+  </tr>
+ </thead>
+ <tbody>
+    <tr>
+      <td>Mail</td>
+      <td>daniel@hell-0.ru</td>
+    </tr>
 
+    <tr>
+      <td>XMPP</td>
+      <td>daniel@xmpp.hell-0.ru</td>
+    </tr>
+
+    <tr>
+      <td>GitHub</td>
+      <td><a href="https://github.com/DanielBash">DanielBash</a></td>
+    </tr>
+
+    <tr>
+      <td>Telegram</td>
+      <td><a href="https://t.me/ddbash">@ddbash</a></td>
+    </tr>
+
+    <tr>
+      <td>This Website</td>
+      <td><a href="https://hell-0.ru/users/daniel">daniel</a></td>
+    </tr>
+
+    <tr>
+      <td>DockerHub</td>
+      <td><a href="https://hub.docker.com/repositories/danielbashl">danielbashl</a></td>
+    </tr>
+ </tbody>
+</table>
+</figure>
 
 {% if user %}
 <p>Or hey, you are registered. There are some useful links: <a href="{{url_for('users.user', username=user.username)}}">Your profile</a>,<br/>
