@@ -1,6 +1,8 @@
 ![placeholder](https://github.com/DanielBash/profile/blob/main/.github/github-banner.png?raw=true)
 ![Python](https://img.shields.io/badge/python-3.12%2B-blue)
 ![Stars](https://img.shields.io/github/stars/DanielBash/profile)
+[![.github/workflows/python-tests.yaml](https://github.com/DanielBash/profile/actions/workflows/python-tests.yaml/badge.svg)](https://github.com/DanielBash/profile/actions/workflows/python-tests.yaml)
+[![update-docker-image](https://github.com/DanielBash/profile/actions/workflows/docker-deploy.yaml/badge.svg)](https://github.com/DanielBash/profile/actions/workflows/docker-deploy.yaml)
 
 # Profile Website
 

@@ -17,7 +17,3 @@ jobs:
           pip install pytest
       - name: Run tests
         run: pytest --tb=short
-  ,,,
-<(^.^)>
-  -|-
-  /\
