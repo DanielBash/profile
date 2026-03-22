@@ -53,7 +53,7 @@ def posts(username):
 
     posts = pagination.items
     
-    if target_user.id == g.user.id:
+    if g.user is not None and target_user.id == g.user.id:
         return render_template(
             "posts.html",
             posts=posts,
